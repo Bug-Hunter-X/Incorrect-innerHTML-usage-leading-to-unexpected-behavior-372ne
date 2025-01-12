@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    //Incorrect way to select an element and set its content
+    document.getElementById('myDiv').innerHTML = "<p>This is some text.</p><p>This is more text.</p>";
+
+    //Correct way to append or insert the content inside an element.
+    // document.getElementById('myDiv').innerHTML += "<p>This is more text.</p>";
+  </script>
+</body>
+</html>
