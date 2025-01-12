@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    <p>This is some text.</p>
+  </div>
+
+  <script>
+    //Correct way to append content to an element
+    const newParagraph = document.createElement('p');
+    newParagraph.textContent = 'This is more text.';
+    document.getElementById('myDiv').appendChild(newParagraph);
+
+    // Or using insertAdjacentHTML for better performance and security in some cases
+    // document.getElementById('myDiv').insertAdjacentHTML('beforeend', '<p>This is even more text.</p>'); 
+  </script>
+</body>
+</html>
